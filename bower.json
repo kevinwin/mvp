@@ -1,0 +1,19 @@
+{
+  "name": "Grayscale.me",
+  "version": "1.0.0",
+  "authors": [
+    "Kevin Nguyen <account@kevinwin.com>"
+  ],
+  "main":   "",
+  "dependencies": {
+    "react": "~0.14.6",
+    "jquery": "~2.2.0",
+    "lodash": "~4.0.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "private": true
+}
