@@ -1,0 +1,10 @@
+## Mac OSX ##
+.DS_Store
+
+## Bower ##
+client/lib/react
+client/lib/jquery
+client/lib/lodash
+
+## Test Data ##
+client/data/data.js
