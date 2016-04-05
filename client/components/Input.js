@@ -36,13 +36,15 @@ var Input = (props) => {
   };
 
   return (
-    <form className="background-form" onSubmit={handleCreate}>
-        <div className="input-group"><input type="text" id="color" className="hex" onChange={handleColorChange} /><label>Hex Code</label></div>
-        <div className="input-group"><input type="text" className="dimension" onChange={handleWidthChange} /><label>Width</label></div>
-        <div className="input-group"><input type="text" className="dimension" onChange={handleHeightChange} /><label>Height</label></div>
-        <input type="submit" value="Create Background"/>
-        <canvas id="canvas" style={{'display':'none'}}></canvas>
-    </form>
+    <div className="form-wrapper">
+      <form className="background-form" onSubmit={handleCreate}>
+          <div className="input-group"><input type="text" id="color" className="hex" onChange={handleColorChange} /><label>Hex Code</label></div>
+          <div className="input-group"><input type="text" className="dimension" onChange={handleWidthChange} /><label>Width</label></div>
+          <div className="input-group"><input type="text" className="dimension" onChange={handleHeightChange} /><label>Height</label></div>
+          <input type="submit" value="Create Background"/>
+          <canvas id="canvas" style={{'display':'none'}}></canvas>
+      </form>
+    </div>
   );
 };
 
