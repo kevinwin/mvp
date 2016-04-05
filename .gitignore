@@ -7,4 +7,4 @@ client/lib/jquery
 client/lib/lodash
 
 ## Test Data ##
-client/data/data.js
+client/data/*
