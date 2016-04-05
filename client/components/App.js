@@ -10,6 +10,14 @@ class App extends React.Component {
 
   componentDidMount() {
     document.body.style.backgroundColor = '#'+this.state.hexCode;
+    $('.background-form .input-group input').focusout(function() {
+      var text_val = $(this).val();
+      if (text_val === '') {
+        $(this).removeClass('has-value');
+      } else {
+        $(this).addClass('has-value');
+      }
+    });
   }
 
   handleHexChange(hexCode) {
