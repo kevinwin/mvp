@@ -1,15 +1,22 @@
 var Input = (props) => {
   var handleColorChange = (event) => {
-    props.onHexInput(event.target.value)
-    document.body.style.backgroundColor = '#'+event.target.value;
+    var hex = event.target.value;
+    hex = hex[0] === '#' ? hex : '#' + hex;
+    props.onHexInput(hex);
+    document.body.style.backgroundColor = hex;
   };
 
   var handleWidthChange = (event) => {
-    props.onWidthInput(event.target.value);
+    // strip px if any
+    var width = event.target.value;
+    width = /px$/.test(width) ? width.replace(/px/, '') : width;
+    props.onWidthInput(width);
   };
 
   var handleHeightChange = (event) => {
-    props.onHeightInput(event.target.value);
+    var height = event.target.value;
+    height = /px$/.test(height) ? height.replace(/px/, '') : height;
+    props.onHeightInput(height);
   };
 
   var handleCreate = (event) => {
@@ -31,8 +38,8 @@ var Input = (props) => {
   return (
     <form className="background-form" onSubmit={handleCreate}>
         <div className="input-group"><input type="text" id="color" className="hex" onChange={handleColorChange} /><label>Hex Code</label></div>
-        <div className="input-group"><input type="text" onChange={handleWidthChange} /><label>Width</label></div>
-        <div className="input-group"><input type="text" onChange={handleHeightChange} /><label>Height</label></div>
+        <div className="input-group"><input type="text" className="dimension" onChange={handleWidthChange} /><label>Width</label></div>
+        <div className="input-group"><input type="text" className="dimension" onChange={handleHeightChange} /><label>Height</label></div>
         <input type="submit" value="Create Background"/>
         <canvas id="canvas" style={{'display':'none'}}></canvas>
     </form>
