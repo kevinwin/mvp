@@ -2,14 +2,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hexCode: Math.floor(Math.random()*16777215).toString(16),
+      hexCode: randomColor({luminosity: 'dark'}),
       width: 0,
       height: 0
     };
   }
 
   componentDidMount() {
-    document.body.style.backgroundColor = '#'+this.state.hexCode;
+    document.body.style.backgroundColor = this.state.hexCode;
     
     // add setCursorPositon to jQuery
     $.fn.setCursorPosition = function (pos) {
