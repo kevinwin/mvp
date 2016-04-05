@@ -2,10 +2,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hexCode: '#000',
+      hexCode: Math.floor(Math.random()*16777215).toString(16),
       width: 0,
       height: 0
     };
+  }
+
+  componentDidMount() {
+    document.body.style.backgroundColor = '#'+this.state.hexCode;
   }
 
   handleHexChange(hexCode) {
