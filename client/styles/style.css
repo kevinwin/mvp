@@ -69,7 +69,7 @@ table {
 #app {
   font-family: 'Montserrat', sans-serif;
   width: 80%;
-  height: 99%;
+  height: 100%;
   position: absolute;
   margin: auto;
   left: 0;
@@ -79,6 +79,13 @@ table {
 body {
   padding: 100px;
   -webkit-font-smoothing: antialiased;
+}
+
+.form-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
 }
 
 input {
