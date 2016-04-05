@@ -29,10 +29,10 @@ var Input = (props) => {
   };
 
   return (
-    <form className="backgroundForm" onSubmit={handleCreate}>
-        <input type="text" placeholder="Hex Code" id="color" className="hex" onChange={handleColorChange} />
-        <input type="text" placeholder="Width" onChange={handleWidthChange} />
-        <input type="text" placeholder="Height" onChange={handleHeightChange} />
+    <form className="background-form" onSubmit={handleCreate}>
+        <div className="input-group"><input type="text" id="color" className="hex" onChange={handleColorChange} /><label>Hex Code</label></div>
+        <div className="input-group"><input type="text" onChange={handleWidthChange} /><label>Width</label></div>
+        <div className="input-group"><input type="text" onChange={handleHeightChange} /><label>Height</label></div>
         <input type="submit" value="Create Background"/>
         <canvas id="canvas" style={{'display':'none'}}></canvas>
     </form>
