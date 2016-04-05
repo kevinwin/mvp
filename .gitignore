@@ -8,3 +8,6 @@ client/lib/lodash
 
 ## Test Data ##
 client/data/*
+
+## Node ##
+node_modules/
