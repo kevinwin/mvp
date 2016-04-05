@@ -6,8 +6,7 @@
   "license": "Proprietary",
   "scripts": {
     "start": "NODE_ENV=production ./node_modules/.bin/nodemon --ignore node_modules server.js",
-    "prod": "NODE_ENV=production node server.js",
-    "postinstall": "webpack -p" 
+    "prod": "NODE_ENV=production node server.js"
 
   },
   "dependencies": {
